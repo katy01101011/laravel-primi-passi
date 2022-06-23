@@ -38,4 +38,8 @@
         padding: 0;
         box-sizing: border-box;
     }
+
+    main {
+        padding-top: 66px;
+    }
 </style>

@@ -7,7 +7,9 @@
 </head>
 <body>
     <x-header></x-header>
-    <h1>Academy</h1>
+    <main>
+        <h1>Academy</h1>
+    </main>
 </body>
 </html>
 
@@ -16,5 +18,9 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+    }
+
+    main {
+        padding-top: 66px;
     }
 </style>
