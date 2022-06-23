@@ -13,6 +13,27 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// HEADER
 Route::get('/', function () {
     return view('home');
 })->name('home');
+
+Route::get('/contacts', function () {
+    return view('contacts');
+})->name('contacts');
+
+Route::get('/corsi', function () {
+    return view('corsi');
+})->name('corsi');
+
+Route::get('/academy', function () {
+    return view('academy');
+})->name('academy');
+
+Route::get('/aziende', function () {
+    return view('aziende');
+})->name('aziende');
+
+Route::get('/eventi', function () {
+    return view('eventi');
+})->name('eventi');
