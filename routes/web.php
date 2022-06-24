@@ -37,3 +37,7 @@ Route::get('/aziende', function () {
 Route::get('/eventi', function () {
     return view('eventi');
 })->name('eventi');
+
+Route::get('/iscriviti', function () {
+    return view('iscriviti');
+})->name('iscriviti');

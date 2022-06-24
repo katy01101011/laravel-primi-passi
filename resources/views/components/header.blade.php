@@ -44,7 +44,9 @@ $navData = [
             <a href="{{route('eventi')}}">Eventi</a>
         </li>
     </ul>
-    <button>Iscriviti</button>
+    <button>
+        <a href="{{route('iscriviti')}}">Iscriviti</a>
+    </button>
 </header>
 
 <style>
@@ -98,5 +100,11 @@ $navData = [
         font-weight: 600;
         padding: .7rem 1.4rem;
         cursor: pointer;
+    }
+
+    button a {
+        width: 100%;
+        height: 100%;
+        color: white;
     }
 </style>
