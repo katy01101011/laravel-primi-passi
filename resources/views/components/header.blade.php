@@ -3,49 +3,41 @@ $navData = [
     [
         'name' => 'Corsi',
         'route' => route('corsi'),
-        'options' => [
-            'Full-Stack Web Developer',
-            'Data Analytics',
-        ],
+        'options' => ['Full-Stack Web Developer', 'Data Analytics'],
     ],
     [
         'name' => 'Academy',
         'route' => route('academy'),
-        'options' => [
-            'Recensioni',
-            'Career Service',
-            'Chi Siamo',
-            'Perché Boolean',
-            'FAQ',
-        ],
+        'options' => ['Recensioni', 'Career Service', 'Chi Siamo', 'Perché Boolean', 'FAQ'],
     ],
     [
         'name' => 'Aziende',
         'route' => route('aziende'),
-        'options' => [
-            'Servizi per la tua azienda',
-            'Assumi gratis uno studente',
-        ],
+        'options' => ['Servizi per la tua azienda', 'Assumi gratis uno studente'],
+    ],
+    [
+        'name' => 'Eventi',
+        'route' => route('eventi'),
     ],
 ];
 ?>
 
 <header>
-    <a href="{{route('home')}}">
+    <a href="{{ route('home') }}">
         <img src="/logo.png" alt="">
     </a>
     <ul>
         @foreach ($navData as $link)
-        <li>
-            <a href="{{ $link['route'] }}">{{ $link['name'] }} <i class="fas fa-chevron-down"></i></a>
-        </li>
+            <li>
+                <a href="{{ $link['route'] }}">{{ $link['name'] }} </a>
+                @if (!$loop->last)
+                    <i class="fas fa-chevron-down"></i>
+                @endif
+            </li>
         @endforeach
-        <li>
-            <a href="{{route('eventi')}}">Eventi</a>
-        </li>
     </ul>
     <button>
-        <a href="{{route('iscriviti')}}">Iscriviti</a>
+        <a href="{{ route('iscriviti') }}">Iscriviti</a>
     </button>
 </header>
 
@@ -108,3 +100,9 @@ $navData = [
         color: white;
     }
 </style>
+
+<script scoped>
+    tendina() {
+        alert('ciao')
+    }
+</script>
