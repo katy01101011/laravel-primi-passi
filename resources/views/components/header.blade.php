@@ -1,17 +1,45 @@
+<?php
+$navData = [
+    [
+        'name' => 'Corsi',
+        'route' => route('corsi'),
+        'options' => [
+            'Full-Stack Web Developer',
+            'Data Analytics',
+        ],
+    ],
+    [
+        'name' => 'Academy',
+        'route' => route('academy'),
+        'options' => [
+            'Recensioni',
+            'Career Service',
+            'Chi Siamo',
+            'Perché Boolean',
+            'FAQ',
+        ],
+    ],
+    [
+        'name' => 'Aziende',
+        'route' => route('aziende'),
+        'options' => [
+            'Servizi per la tua azienda',
+            'Assumi gratis uno studente',
+        ],
+    ],
+];
+?>
+
 <header>
     <a href="{{route('home')}}">
         <img src="/logo.png" alt="">
     </a>
     <ul>
+        @foreach ($navData as $link)
         <li>
-            <a href="{{route('corsi')}}">Corsi <i class="fas fa-chevron-down"></i></a>
+            <a href="{{ $link['route'] }}">{{ $link['name'] }} <i class="fas fa-chevron-down"></i></a>
         </li>
-        <li>
-            <a href="{{route('academy')}}">Academy <i class="fas fa-chevron-down"></i></a>
-        </li>
-        <li>
-            <a href="{{route('aziende')}}">Aziende <i class="fas fa-chevron-down"></i></a>
-        </li>
+        @endforeach
         <li>
             <a href="{{route('eventi')}}">Eventi</a>
         </li>
@@ -46,6 +74,7 @@
 
     li {
         margin: 1rem;
+        position: relative;
     }
 
     a {

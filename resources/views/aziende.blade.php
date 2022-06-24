@@ -8,19 +8,7 @@
 <body>
     <x-header></x-header>
     <main>
-        <h1>Aziende</h1>
+        <h4>Aziende</h4>
     </main>
 </body>
 </html>
-
-<style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-    main {
-        padding-top: 66px;
-    }
-</style>

@@ -8,19 +8,7 @@
 <body>
     <x-header></x-header>
     <main>
-        <h1>Corsi</h1>
+        <h4>Corsi</h4>
     </main>
 </body>
 </html>
-
-<style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-    main {
-        padding-top: 66px;
-    }
-</style>
